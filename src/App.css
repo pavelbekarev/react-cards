@@ -1,0 +1,14 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cards__content {
+    display: grid;
+    grid-template-areas: "card1 card2 card3";
+}
+
+.last-card {
+    opacity: 0.5;
+}

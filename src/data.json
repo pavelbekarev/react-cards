@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "front": "apple",
+        "back": "яблоко"
+    },
+    {
+        "id": 2,
+        "front": "red",
+        "back": "красный"
+    },
+    {
+        "id": 3,
+        "front": "green",
+        "back": "зеленый"
+    },
+    {
+        "id": 4,
+        "front": "cow",
+        "back": "корова"
+    },
+    {
+        "id": 5,
+        "front": "gate",
+        "back": "ворота"
+    },
+    {
+        "id": 6,
+        "front": "crossbar",
+        "back": "перекладина"
+    },
+    {
+        "id": 7,
+        "front": "hall",
+        "back": "холл"
+    },
+    {
+        "id": 8,
+        "front": "interface",
+        "back": "интерфейс"
+    },
+    {
+        "id": 9,
+        "front": "magazine",
+        "back": "журнал"
+    },
+    {
+        "id": 10,
+        "front": "shop",
+        "back": "магазин"
+    }
+]

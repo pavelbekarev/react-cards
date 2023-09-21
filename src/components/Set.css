@@ -1,0 +1,20 @@
+.card__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.set__title {
+    font-size: 30px;
+}
+
+.controls__btn {
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.step__shower {
+    margin: 10px 10px;
+}
