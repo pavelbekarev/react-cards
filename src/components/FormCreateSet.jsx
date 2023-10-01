@@ -1,6 +1,8 @@
+import './CreateSet.css';
+
 export const FormCreateSet = () => {
     return (
-        <form>
+        <form className="create-set__form">
             <label>
                 Название набора:
                 <input type="text" name="name"/>
