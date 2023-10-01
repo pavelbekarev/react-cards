@@ -1,52 +1,74 @@
 [
     {
-        "id": 1,
+        "id":1,
         "front": "apple",
-        "back": "яблоко"
+        "back": "яблоко",
+        "setName": "English"
     },
     {
         "id": 2,
         "front": "red",
-        "back": "красный"
+        "back": "красный",
+        "setName": "English"
     },
     {
         "id": 3,
-        "front": "green",
-        "back": "зеленый"
+        "front": "lion",
+        "back": "лев",
+        "setName": "Animals"
     },
     {
         "id": 4,
-        "front": "cow",
-        "back": "корова"
+        "front": "dog",
+        "back":"собака",
+        "setName": "Animals"
     },
     {
         "id": 5,
-        "front": "gate",
-        "back": "ворота"
+        "front": "toyota",
+        "back": "тойота",
+        "setName": "Cars"
     },
     {
-        "id": 6,
-        "front": "crossbar",
-        "back": "перекладина"
+        "id": 6, 
+        "front": "lexus",
+        "back": "лексус",
+        "setName": "Cars"
     },
     {
         "id": 7,
-        "front": "hall",
-        "back": "холл"
+        "front":"ford",
+        "back":"форд",
+        "setName": "Cars"
     },
     {
-        "id": 8,
-        "front": "interface",
-        "back": "интерфейс"
+        "id":8,
+        "front": "nissan",
+        "back": "ниссан",
+        "setName": "Cars"
     },
     {
         "id": 9,
-        "front": "magazine",
-        "back": "журнал"
+        "front": "padding",
+        "back": "отступ внутренний",
+        "setName": "Css-свойства"
     },
     {
-        "id": 10,
-        "front": "shop",
-        "back": "магазин"
+        "id":10,
+        "front": "ice hockey",
+        "back": "хоккей",
+        "setName": "Sport"
+    },
+    {
+        "id": 11,
+        "front":"margin",
+        "back":"отступ внешний", 
+        "setName": "Css-свойства"
+    },
+    {
+        "id": 12,
+        "front": "margin",
+        "back":"отступ внешний",
+        "setName": "Css-свойства"
     }
 ]

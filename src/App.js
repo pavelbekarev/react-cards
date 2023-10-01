@@ -1,18 +1,25 @@
 import './App.css';
-import {Header} from './components/Header';
-import {Set} from './components/Set';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { PageViewSet } from './components/PageViewSet';
+import { PageCreateSet } from './components/PageCreateSet';
+import { PageSelectSet } from './components/PageSelectSet';
+import { FormCreateCard } from './components/FormCreateCard';
+import { FormCreateSet } from './components/FormCreateSet';
 
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <div className='cards__content'>
-        <Set />
-        <Set />
-        <Set />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<PageSelectSet />}/>
+        <Route path='/set/:id' element={<PageViewSet />}/>
+
+        <Route path='/admin' element={<PageCreateSet />}>
+          <Route path='createset' element={<FormCreateSet />}/>
+          <Route path='createcard' element={<FormCreateCard />}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

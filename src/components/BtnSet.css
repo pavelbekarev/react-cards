@@ -1,0 +1,28 @@
+.set-list {
+    align-items: flex-start;
+    margin-left: 400px;
+}
+
+.list-set__item {
+    list-style: none;
+    
+}
+
+.list-set__btn {
+    text-decoration: none;
+    border: none;
+    margin: 5px;
+    padding: 10px;
+    background-color: lavender;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.list-set__btn:hover,
+.list-set__btn:focus {
+    transform: scale(1.1);
+    color:darkorchid;
+    transition: 0.3s ease;
+}
