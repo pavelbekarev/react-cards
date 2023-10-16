@@ -3,8 +3,18 @@ import './CreateSet.css';
 import UseInput from './UseInput';
 import { useForm } from 'react-hook-form';
 import "./error.css";
+import { useEffect } from 'react';
 
 export const FormCreateSet = () => {
+    const [count, setcount] = useState(0);
+
+    useEffect( () => {
+        if (count !== 0) {
+            console.log(`Отправка формы : ${count}`);
+            alert(`Отправка формы : ${count}`);
+        }
+    }, [count] );
+
     const { register, handleSubmit, formState : {errors} } = useForm({
         defaultValues: {
             name: "",
@@ -32,6 +42,7 @@ export const FormCreateSet = () => {
 
     return (
         <form className="create-set__form" onSubmit={handleSubmit( (data) => {
+            setcount(count + 1);
             console.log(data);
         } )}>
             <label htmlFor='name'>
