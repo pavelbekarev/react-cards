@@ -56,10 +56,7 @@ export const FormCreateSet = () => {
 
 
     return (
-        <form className="create-set__form" onSubmit={handleSubmit( (data) => {
-            setcount(count + 1);
-            console.log(data);
-        } )}>
+        <form className="create-set__form" onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor='name'>
                 Название набора:
             </label>
