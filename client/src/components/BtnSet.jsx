@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import './BtnSet.css';
+import './BtnSet.scss';
 
 export const BtnSet = ({name, id}) => {
     return <li className="list-set__item">

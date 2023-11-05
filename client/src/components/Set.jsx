@@ -2,8 +2,11 @@ import {Card} from './Card';
 import './Set.css';
 import { useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 export function Set() {
+    const dispatch = useDispatch();
+
     const param = useParams();
     console.log(param.id);
 
@@ -17,6 +20,7 @@ export function Set() {
     const switchCountPlus = () => {
         if (step < cards.length-1) {
             setStep(step+1);
+            dispatch({type: "INCREASE", payload: 1})
         }
     }
 
@@ -24,6 +28,7 @@ export function Set() {
     const switchCountMinus = () => {
         if (step >= 1){
             setStep(step-1);
+            dispatch({type: "INCREASE", payload: 1})
         }
     }
 

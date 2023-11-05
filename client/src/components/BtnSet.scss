@@ -1,3 +1,5 @@
+$btn-color: red ;
+
 .set-list {
     align-items: flex-start;
     margin-left: 400px;
@@ -18,11 +20,12 @@
     font-size: 20px;
     border-radius: 10px;
     transition: 0.3s ease;
+    color: $btn-color;
 }
 
 .list-set__btn:hover,
 .list-set__btn:focus {
     transform: scale(1.1);
-    color:darkorchid;
+    color:$btn-color;
     transition: 0.3s ease;
 }

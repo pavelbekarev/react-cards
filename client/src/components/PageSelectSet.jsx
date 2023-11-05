@@ -1,7 +1,7 @@
 import React from "react";
 import { Header } from "./Header";
 import { BtnSet } from "./BtnSet";
-import "./BtnSet.css"
+import "./BtnSet.scss"
 
 export const PageSelectSet = () => {
     const cards = require("../data");
