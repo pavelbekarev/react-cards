@@ -27,7 +27,7 @@ class SetController {
         }
     }
 
-    async getSets() {
+    async getSets(req, res) {
         try {
             const sets = await Set.find();
             return res.json(sets);

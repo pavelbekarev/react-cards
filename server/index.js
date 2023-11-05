@@ -7,8 +7,10 @@ const app = express();
 const PORT = config.get("serverPort");
 app.use(cors());
 const setRouter = require("./routes/set.routes");
+const cardRouter = require("./routes/card.routes");
 app.use(express.json());
-app.use("/api/set", setRouter)
+app.use("/api/set", setRouter);
+app.use("/api/card", cardRouter);
 
 app.get("/", (req, res) => {
     res.send("")
