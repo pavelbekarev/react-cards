@@ -6,9 +6,9 @@ class CardController {
             const { frontside, backside, set_id } = req.body;
 
             const card = new Card({frontside, backside, set_id});
-        
+            const cards = await Card.find({ set_id: req.query.id })
             await card.save();
-            return res.json({message: "Card was created", data: frontside});
+            return res.json({message: "Card was created", data: cards});
         }
 
         catch (e) {

@@ -28,7 +28,7 @@ export function Set() {
     const switchCountMinus = () => {
         if (step >= 1){
             setStep(step-1);
-            dispatch({type: "INCREASE", payload: 1})
+            dispatch({type: "DECREASE", payload: 1})
         }
     }
 
