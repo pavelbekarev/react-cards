@@ -2,25 +2,21 @@ import React from "react";
 import { Header } from "./Header";
 import { BtnSet } from "./BtnSet";
 import "./BtnSet.scss"
+import { useDispatch, useSelector } from "react-redux";
+import { getSets } from "../actions/set";
+import { useEffect } from "react";
 
 export const PageSelectSet = () => {
     const cards = require("../data");
 
-    // выбор неповторяющихся названий сетов
-    const sets = cards.reduce(
-        (acc, item) => {
-            if (acc.map[item.setName])
-                return acc;
+    const dispatch = useDispatch();
 
-            acc.map[item.setName] = true;
-            acc.sets.push(item.setName);
-            return acc;
-        },
-        {
-            map: {},
-            sets: [],
-        }
-    ).sets.map((item, index) => (<BtnSet key={index} name={item} id={index}/>))
+    useEffect(() => {
+        dispatch(getSets())
+    }, [dispatch]);
+
+    const sets = useSelector(state => state.set.sets)
+                    .map(set => <BtnSet key={set._id} name={set.name} id={set._id} />)
 
     return (
         <>

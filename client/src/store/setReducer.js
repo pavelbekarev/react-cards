@@ -1,16 +1,20 @@
-const defaultState = {
-    sets: []
-}
+import {createSlice} from "@reduxjs/toolkit";
 
-export const setReducer = (state = defaultState, action) => {
-    switch (action.type) {
-        case "ADD_SET":
-            return {...state, sets: [...state.sets, action.payload]};
-    
-        case "SET_SETS":
-            return {...state, sets: action.payload};
+const setSlice = createSlice({
+    name: "set",
+    initialState: {
+        sets: []
+    },
+    reducers: {
+        addSet(state, action) {
+            state.sets.push(action.payload);
+        },
 
-        default: 
-            return state;
+        setSets(state, action) {
+            state.sets = action.payload;
+        }
     }
-}
+})
+
+export const {addSet, setSets} = setSlice.actions;
+export default setSlice.reducer;

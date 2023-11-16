@@ -1,6 +1,6 @@
-import { createStore, combineReducers } from "redux";
-import { numberReducer } from "./numberReducer";
-import { setReducer } from "./setReducer";
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import numberReducer from "./numberReducer";
+import setReducer from "./setReducer";
 import {composeWithDevTools} from "redux-devtools-extension";
 
 
@@ -10,4 +10,6 @@ const rootReducer = combineReducers({
 });
 
 
-export const store = createStore(rootReducer, composeWithDevTools());
+export const store = configureStore({
+    reducer: rootReducer
+});

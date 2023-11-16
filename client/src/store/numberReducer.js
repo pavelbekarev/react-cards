@@ -1,17 +1,21 @@
-const defaultState = {
+import {createSlice} from "@reduxjs/toolkit";
+
+
+const numberSlice = createSlice({
+  name: "number",
+  initialState: {
     number: 0
-}
+  },
+  reducers: {
+    increase(state, action) {
+      state.number += action.payload;
+    },
 
-
-export const numberReducer = (state = defaultState, action) => {
-    switch (action.type) {
-      case "INCREASE":
-        return {...state, number : state.number + action.payload};
-      
-      case "DECREASE":
-        return {...state, number : state.number - action.payload};
-      
-      default:
-        return state;
+    decrease(state, action) {
+      state.number -= action.payload;
     }
-}
+  }
+})
+
+export const {increase, decrease} = numberSlice.actions;
+export default numberSlice.reducer;

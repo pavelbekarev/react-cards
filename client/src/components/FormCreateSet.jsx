@@ -4,6 +4,8 @@ import UseInput from './UseInput';
 import { useForm } from 'react-hook-form';
 import "./error.css";
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { createSet } from '../actions/set';
 
 export const FormCreateSet = () => {
     const [count, setcount] = useState(0);
@@ -39,19 +41,10 @@ export const FormCreateSet = () => {
     //     console.log(name, discription);
     // }
 
-    const onSubmit = async (data) => {
-        console.log(data);
+    const dispatch = useDispatch();
 
-        fetch("http://localhost:5000/api/set/create", {
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json"
-            },
-            method: "POST",
-            body: JSON.stringify(data)
-        })
-        .then(function (res) {console.log(res)})
-        .catch(function (res) {console.log(res)})
+    const onSubmit = async (data) => {
+        dispatch(createSet(data));
     }
 
 
