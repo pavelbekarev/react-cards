@@ -13,7 +13,6 @@ function App() {
       <Routes>
         <Route path='/' element={<PageSelectSet />}/>
         <Route path='/set/:id' element={<PageViewSet />}/>
-        <Route path='/card/:id' element={<PageViewCard />}/>
 
         <Route path='/admin' element={<PageCreateSet />}>
           <Route path='createset' element={<FormCreateSet />}/>
