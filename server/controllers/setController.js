@@ -61,24 +61,24 @@ class SetController {
 
 
     async updateSet(req, res) {
-        try {
-            const { _id, name, description } = req.body;
+        // try {
+            const { id, name, description } = req.body;
             const alias = cyrillicToTranslit().transform(name, "_");
 
             const candidateName = await Set.findOne({name: name});
             const candidateAlias = await Set.findOne({alias: alias});
 
-            const candidateSet = await Set.findOne({_id: req.query.id})
+            const candidateSet = await Set.findOne({id})
 
-            if (candidateSet) {
+            if (!candidateSet) {
                 if (candidateName || candidateAlias) {
                     return res.status(400).json({message: `Set with name ${name} already exist`});
                 }
 
                 else {
-                    await Set.findByIdAndUpdate(_id, {
+                    await Set.findByIdAndUpdate({_id: id}, {
                         name: name,
-                        description: description,
+                        discription: description,
                         alias: alias,
                     },
                     {new: true})
@@ -88,13 +88,13 @@ class SetController {
             }
 
             else {
-                return res.status(400).json({message: `Set with id ${_id} not found`});
+                return res.status(400).json({message: `Set with id ${id} not found`});
             }
-        }
+        // }
 
-        catch (e) {
+        // catch (e) {
 
-        }
+        // }
     }
 }
 
